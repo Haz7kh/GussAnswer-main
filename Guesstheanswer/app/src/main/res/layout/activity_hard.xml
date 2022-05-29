@@ -43,7 +43,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/transWhite"
-            app:srcCompat="@drawable/ic_refresh_24" />
+            android:minHeight="48dp"
+            app:srcCompat="@drawable/ic_refresh_24"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/textView2"
@@ -62,6 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/transWhite"
+            android:minHeight="48dp"
             app:srcCompat="@drawable/ic_share_purple_24"
             tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
