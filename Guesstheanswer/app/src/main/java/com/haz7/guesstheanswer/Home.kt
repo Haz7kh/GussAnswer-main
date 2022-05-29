@@ -33,7 +33,7 @@ class Home : AppCompatActivity() {
 
 
         playBtn.setOnClickListener {
-            val intent = Intent(this@Home, QuestionActivity::class.java)
+            val intent = Intent(this@Home, Levels::class.java)
             startActivity(intent)
         }
 
