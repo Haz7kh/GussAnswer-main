@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/QuestionLayout"
+    android:id="@+id/HardLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/shape_background">
@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/toolsBar"
+        android:id="@+id/HtoolsBar"
         android:layout_width="365dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -38,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/welcomeText">
 
         <ImageButton
-            android:id="@+id/btnChangeQuastion"
+            android:id="@+id/HbtnChangeQuastion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -48,18 +48,18 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/HtextView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Hard qustions"
+            android:text="Hard Level"
             android:textColor="@color/purple"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <ImageButton
-            android:id="@+id/btnSHare"
+            android:id="@+id/HbtnSHare"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -70,7 +70,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textViewQuestion"
+        android:id="@+id/HtextViewQuestion"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginLeft="16dp"
@@ -83,13 +83,13 @@
         android:textColor="@color/purpleDark"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnStart"
+        app:layout_constraintBottom_toTopOf="@+id/HbtnStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolsBar" />
+        app:layout_constraintTop_toBottomOf="@+id/HtoolsBar" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/HlinearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -98,6 +98,7 @@
         tools:layout_editor_absoluteX="10dp">
 
         <TextView
+            android:id="@+id/Hscore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -105,7 +106,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/scoreNumber"
+            android:id="@+id/HscoreNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -113,23 +114,23 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/HtextView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Life" />
 
         <TextView
-            android:id="@+id/lifeTxtviw"
+            android:id="@+id/HlifeTxtviw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="3" />
+            android:text="2" />
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnStart"
+        android:id="@+id/HbtnStart"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -142,12 +143,12 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnFalse"
+        app:layout_constraintEnd_toStartOf="@+id/HbtnFalse"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnFalse"
+        android:id="@+id/HbtnFalse"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -161,19 +162,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnStart" />
+        app:layout_constraintStart_toEndOf="@+id/HbtnStart" />
 
     <FrameLayout
-        android:id="@+id/frame"
+        android:id="@+id/Hframe"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textViewQuestion"
+        app:layout_constraintEnd_toStartOf="@+id/HtextViewQuestion"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textViewQuestion"
+        app:layout_constraintStart_toEndOf="@+id/HtextViewQuestion"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/HlinearLayout">
 
     </FrameLayout>
 

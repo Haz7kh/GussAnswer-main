@@ -48,15 +48,15 @@ class HardActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_hard)
 
-        question = findViewById(R.id.textViewQuestion)
-        trueBtn = findViewById(R.id.btnStart)
-        falseBtn = findViewById(R.id.btnFalse)
-        refresh = findViewById(R.id.btnChangeQuastion)
-        shareQuestion = findViewById(R.id.btnSHare)
-        score = findViewById(R.id.scoreNumber)
-        life = findViewById(R.id.lifeTextView)
+        question = findViewById(R.id.HtextViewQuestion)
+        trueBtn = findViewById(R.id.HbtnStart)
+        falseBtn = findViewById(R.id.HbtnFalse)
+        refresh = findViewById(R.id.HbtnChangeQuastion)
+        shareQuestion = findViewById(R.id.HbtnSHare)
+        score = findViewById(R.id.HscoreNumber)
+        life = findViewById(R.id.HlifeTxtviw)
 
 
         showQuestion()
