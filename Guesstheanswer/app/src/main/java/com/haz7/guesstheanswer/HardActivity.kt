@@ -23,6 +23,7 @@ class HardActivity : AppCompatActivity() {
     lateinit var refresh: ImageButton
     lateinit var shareQuestion: ImageButton
     lateinit var score:TextView
+    lateinit var life:TextView
 
 
 
@@ -40,6 +41,7 @@ class HardActivity : AppCompatActivity() {
     lateinit var CurrentAnswerDetails:String
     var CurreentAnswer:Boolean = false
     var scoreCount=0
+    var lifeCount = 2
 
 
 
@@ -53,6 +55,7 @@ class HardActivity : AppCompatActivity() {
         refresh = findViewById(R.id.btnChangeQuastion)
         shareQuestion = findViewById(R.id.btnSHare)
         score = findViewById(R.id.scoreNumber)
+        life = findViewById(R.id.lifeTxtviw)
 
 
         showQuestion()
@@ -125,12 +128,15 @@ class HardActivity : AppCompatActivity() {
             Toast.makeText(this,"Wrong answer",Toast.LENGTH_SHORT).show()
             scoreCount = scoreCount-10
             score.text= scoreCount.toString()
+            lifeCount -= 1
+            life.text=lifeCount.toString()
             val intent = Intent(this@HardActivity, AnswerActivity::class.java)
             intent.putExtra("QuestionAnswer", CurrentAnswerDetails)
             startActivity(intent)
 
             showQuestion()
             winner()
+            tryAgain()
         }
 
 
@@ -147,12 +153,15 @@ class HardActivity : AppCompatActivity() {
             Toast.makeText(this,"Wrong answer",Toast.LENGTH_SHORT).show()
             scoreCount = scoreCount-10
             score.text= scoreCount.toString()
+            lifeCount -= 1
+            life.text=lifeCount.toString()
             val intent = Intent(this@HardActivity, AnswerActivity::class.java)
             intent.putExtra("QuestionAnswer", CurrentAnswerDetails)
             startActivity(intent)
 
             showQuestion()
             winner()
+            tryAgain()
         }
 
     }
@@ -181,6 +190,26 @@ class HardActivity : AppCompatActivity() {
 
         }
 
+    }
+    fun tryAgain() {
+        if (lifeCount==0){
+            var alertDialog=AlertDialog.Builder(this@HardActivity)
+            alertDialog.setTitle("SORRY, GOOD LUCK NEXT TIME :(").setMessage("Do you want to try again?")
+                .setIcon(R.drawable.ic_win_done_24)
+                . setCancelable(false)
+                .setNegativeButton("NO", DialogInterface.OnClickListener { dialogInterface, which ->
+                    dialogInterface.cancel()
+                    finish()
+                })
+                .setPositiveButton("YES", DialogInterface.OnClickListener { dialogInterface, which ->
+                    scoreCount=0
+                    score.text= scoreCount.toString()
+                    lifeCount=3
+                    life.text=lifeCount.toString()
+                })
+            alertDialog.create().show()
+
+        }
     }
 
 
