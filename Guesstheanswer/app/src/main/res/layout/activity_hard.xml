@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Qustion"
+            android:text="Hard qustions"
             android:textColor="@color/purple"
             android:textSize="18sp"
             android:textStyle="bold" />
