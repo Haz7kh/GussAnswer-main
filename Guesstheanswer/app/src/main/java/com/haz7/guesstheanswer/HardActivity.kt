@@ -56,7 +56,7 @@ class HardActivity : AppCompatActivity() {
         refresh = findViewById(R.id.btnChangeQuastion)
         shareQuestion = findViewById(R.id.btnSHare)
         score = findViewById(R.id.scoreNumber)
-        life = findViewById(R.id.lifeTxtviw)
+        life = findViewById(R.id.lifeTextView)
 
 
         showQuestion()

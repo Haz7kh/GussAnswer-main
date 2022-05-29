@@ -9,34 +9,40 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-class Home : AppCompatActivity() {
+class Levels : AppCompatActivity() {
     lateinit var welcome:TextView
-    lateinit var playBtn:Button
-    lateinit var image:ImageView
+    lateinit var BtnEasy:Button
+    lateinit var BtnHard:Button
+
+    //lateinit var image:ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.home_activity)
+        setContentView(R.layout.activity_levels)
         //animation
         val ttb=AnimationUtils.loadAnimation(this,R.anim.top_to_bottom)
         val stb=AnimationUtils.loadAnimation(this,R.anim.scale_to_big)
 
 
         welcome=findViewById(R.id.welcomeText)
-        playBtn=findViewById(R.id.BtnStart)
-        image=findViewById(R.id.imageView)
+        BtnEasy=findViewById(R.id.BtnEasy)
+        BtnHard=findViewById(R.id.BtnHard)
+        //image=findViewById(R.id.imageView)
 
         //set the anim
         welcome.startAnimation(ttb)
-        playBtn.startAnimation(ttb)
-        image.startAnimation(stb)
 
+        //image.startAnimation(stb)
 
-        playBtn.setOnClickListener {
-            val intent = Intent(this@Home, Levels::class.java)
+        BtnEasy.setOnClickListener {
+            val intent = Intent(this@Levels, QuestionActivity::class.java)
             startActivity(intent)
         }
 
+        BtnHard.setOnClickListener {
+            val intent = Intent(this@Levels, HardActivity::class.java)
+            startActivity(intent)
+        }
 
     }
-    }
+}
