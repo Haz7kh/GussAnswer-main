@@ -45,6 +45,7 @@ class QuestionActivity : AppCompatActivity() {
     var CurreentAnswer:Boolean = false
     var scoreCount=0
     var lifeCount=3
+    var index=0
 
 
 
@@ -64,9 +65,11 @@ class QuestionActivity : AppCompatActivity() {
         showQuestion()
 
         refresh.setOnClickListener{
+            index +=1
             showQuestion()
             scoreCount = scoreCount-5
             score.text= scoreCount.toString()
+
         }
 
         trueBtn.setOnClickListener {
@@ -104,7 +107,7 @@ class QuestionActivity : AppCompatActivity() {
 
 
 for (i in 0..QuestionsList.size){
-        var index = Random.nextInt(QuestionsList.size)
+//        index = Random.nextInt(QuestionsList.size)
 
 
               CurrentQuestion = QuestionsList[index]
@@ -123,6 +126,7 @@ for (i in 0..QuestionsList.size){
             Toast.makeText(this,"Right answer",Toast.LENGTH_SHORT).show()
             scoreCount = scoreCount+10
             score.text= scoreCount.toString()
+            index=index+1
 
             showQuestion()
             winner()
@@ -134,6 +138,7 @@ for (i in 0..QuestionsList.size){
             score.text= scoreCount.toString()
             lifeCount -= 1
             life.text=lifeCount.toString()
+            index=index+1
 
             val intent = Intent(this@QuestionActivity, AnswerActivity::class.java)
             intent.putExtra("QuestionAnswer", CurrentAnswerDetails)
@@ -151,6 +156,7 @@ for (i in 0..QuestionsList.size){
             Toast.makeText(this,"Right answer",Toast.LENGTH_SHORT).show()
             scoreCount = scoreCount+10
             score.text= scoreCount.toString()
+            index=index+1
             showQuestion()
             winner()
 
@@ -160,6 +166,7 @@ for (i in 0..QuestionsList.size){
             score.text= scoreCount.toString()
             lifeCount -= 1
             life.text=lifeCount.toString()
+            index=index+1
             val intent = Intent(this@QuestionActivity, AnswerActivity::class.java)
             intent.putExtra("QuestionAnswer", CurrentAnswerDetails)
             startActivity(intent)
