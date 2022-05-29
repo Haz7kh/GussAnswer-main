@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class Levels : AppCompatActivity() {
-    lateinit var welcome:TextView
+    //lateinit var welcome:TextView
     lateinit var BtnEasy:Button
     lateinit var BtnHard:Button
 
@@ -24,13 +24,13 @@ class Levels : AppCompatActivity() {
         val stb=AnimationUtils.loadAnimation(this,R.anim.scale_to_big)
 
 
-        welcome=findViewById(R.id.welcomeText)
+        //welcome=findViewById(R.id.welcomeText)
         BtnEasy=findViewById(R.id.BtnEasy)
         BtnHard=findViewById(R.id.BtnHard)
         //image=findViewById(R.id.imageView)
 
         //set the anim
-        welcome.startAnimation(ttb)
+        //welcome.startAnimation(ttb)
 
         //image.startAnimation(stb)
 
