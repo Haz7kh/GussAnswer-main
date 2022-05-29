@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Stockholm is the Capital of Sweden.",
+    "A": true,
+    "A_D": "The Capital of Sweden is Stockholm."
+  },
+  {
+    "question": "Ears are responsible for smelling.",
+    "A": false,
+    "A_D": "Hearing"
+  },
+  {
+    "question": "The color of cherries is red.",
+    "A": true,
+    "A_D": "The cherries is red"
+  },
+  {
+    "question": "Butterflies are birds.",
+    "A": false,
+    "A_D": "Butterflies are insects "
+  },
+  {
+    "question": "The capital of France is Washington DC.",
+    "A": false,
+    "A_D": "The Capital of France is Paris."
+  },
+  {
+    "question": "There are two lungs found in the human body.",
+    "A": true,
+    "A_D": "There are two lungs in the human body."
+  },
+  {
+    "question": "A century consists of one hundred years.",
+    "A": true,
+    "A_D": "One hundred years calls a century"
+  },
+  {
+    "question": "Chlorophyll is responsible for green color in plants.",
+    "A": true,
+    "A_D": "Chlorophyll is responsible for green color in plants."
+  },
+  {
+    "question": "French is the official language of Spain.",
+    "A": false,
+    "A_D": "Spanish is the official language of Spain."
+  },
+  {
+    "question": "The closest planet to the sun is Venus.",
+    "A":false ,
+    "A_D": "The closest planet to the sun is Mercury"
+  },
+  {
+    "question": "Asia is the largest continent in the world.",
+    "A":false ,
+    "A_D": " The largest continent in the world is Asia."
+  },
+  {
+    "question": "Adult humans have 32 teeth.",
+    "A": true,
+    "A_D": "The adult human has 32 teeth"
+  }
+]
